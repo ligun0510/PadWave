@@ -21,17 +21,19 @@ All wireless. All at once.
 - A Sony **DualSense** controller
 - Bluetooth
 
-## Download
+## Get PulseCore
 
-Get the latest installer from the **[Releases](../../releases)** page.
+PulseCore is available on **Steam** — install once and it stays updated automatically.
+
+👉 **[Get it on Steam](https://store.steampowered.com/)** &nbsp;*(store page coming soon)*
 
 ## Getting started
 
-1. Run the installer.
+1. Install PulseCore from Steam and launch it.
 2. On first launch, allow PulseCore to install the required components (one prompt).
 3. Pair your DualSense over Bluetooth — hold **PS + Create** until the lightbar flashes, then
    select it in Windows Bluetooth settings.
-4. Open PulseCore and press **Start**. That's it — play.
+4. Press **Start** in PulseCore. That's it — play.
 
 ## Features
 
