@@ -1,5 +1,9 @@
 # PulseCore
 
+![Platform](https://img.shields.io/badge/platform-Windows%2011%20x64-0078D6)
+![Status](https://img.shields.io/badge/status-beta-orange)
+[![Steam](https://img.shields.io/badge/Steam-store%20page%20soon-1b2838?logo=steam&logoColor=white)](https://store.steampowered.com/)
+
 **Use your DualSense wirelessly on PC — the full experience, as if it were plugged in.**
 
 PulseCore brings the complete DualSense feel to Windows over Bluetooth. Your games get a
@@ -14,6 +18,12 @@ fully‑featured controller — no cable required.
 All wireless. All at once.
 
 > **Beta.** PulseCore is under active development — feedback is very welcome.
+
+## Screenshots
+
+<!-- Drop screenshots here (Dashboard, Controller, Audio). Example:
+![Dashboard](docs/screenshots/dashboard.png) -->
+_Coming soon._
 
 ## Requirements
 
@@ -56,6 +66,10 @@ Open the **Audio** page and check the toggles; select PulseCore's audio device i
 
 **Adaptive triggers or rumble don't react in a game.**
 Some titles need their native controller support enabled (and Steam Input set accordingly).
+
+## What's new
+
+See the **[Changelog](CHANGELOG.md)** — and watch **[Releases](../../releases)** to get notified of updates.
 
 ## Support & feedback
 
