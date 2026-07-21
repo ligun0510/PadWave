@@ -3,6 +3,7 @@
 ![Platform](https://img.shields.io/badge/platform-Windows%2011%20x64-0078D6)
 ![Status](https://img.shields.io/badge/status-beta-orange)
 [![Steam](https://img.shields.io/badge/Steam-store%20page%20soon-1b2838?logo=steam&logoColor=white)](https://store.steampowered.com/)
+[![Discord](https://img.shields.io/badge/Discord-join%20the%20community-5865F2?logo=discord&logoColor=white)](https://discord.gg/tYRFz6n8Rw)
 
 **Use your DualSense wirelessly on PC — the full experience, as if it were plugged in.**
 
@@ -73,8 +74,15 @@ See the **[Changelog](CHANGELOG.md)** — and watch **[Releases](../../releases)
 
 ## Support & feedback
 
-Found a bug or have an idea? Open an **[Issue](../../issues/new/choose)** — steps to reproduce and
-screenshots help a lot. The app's **Diagnostics → Export** bundle is great to attach.
+**[Join the Discord](https://discord.gg/tYRFz6n8Rw)** — the fastest way to get help, and where new
+versions are announced first. There are forums for bug reports, for feature requests, and for the
+effect packs that add per-game haptics, in English and Russian.
+
+Prefer GitHub? Open an **[Issue](../../issues/new/choose)** instead — either reaches us.
+
+Whichever you pick: steps to reproduce help enormously, and the app's **Diagnostics → Export report**
+bundle helps most of all. It carries versions, driver state and logs, with your account name and device
+IDs stripped out.
 
 ---
 
