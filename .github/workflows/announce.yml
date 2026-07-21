@@ -23,17 +23,29 @@ jobs:
         env:
           WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
           TAG: ${{ github.event.release.tag_name || inputs.tag }}
-          NAME: ${{ github.event.release.name }}
-          BODY: ${{ github.event.release.body }}
-          URL: ${{ github.event.release.html_url }}
+          GH_TOKEN: ${{ github.token }}
         run: |
           python3 - <<'PY'
           import json, os, urllib.request
 
+          repo = os.environ['GITHUB_REPOSITORY']
           tag = os.environ['TAG']
-          name = os.environ.get('NAME') or tag
-          body = os.environ.get('BODY') or ''
-          url = os.environ.get('URL') or f'https://github.com/{os.environ["GITHUB_REPOSITORY"]}/releases/tag/{tag}'
+
+          # The release is fetched by tag rather than read from the event payload, so a manual re-send
+          # produces exactly the same message as the automatic one. Two code paths that can disagree
+          # is how the re-send ends up posting an empty announcement.
+          def get(url, token=None, ua='PulseCore-Announce'):
+              req = urllib.request.Request(url, headers={'User-Agent': ua})
+              if token:
+                  req.add_header('Authorization', 'Bearer ' + token)
+                  req.add_header('Accept', 'application/vnd.github+json')
+              with urllib.request.urlopen(req) as r:
+                  return json.loads(r.read())
+
+          rel = get(f'https://api.github.com/repos/{repo}/releases/tags/{tag}',
+                    os.environ['GH_TOKEN'])
+          body = rel.get('body') or ''
+          url = rel['html_url']
 
           # Discord truncates hard at 4096 in an embed description. Cutting at a line boundary and
           # linking out beats a sentence that stops mid-word.
@@ -44,16 +56,20 @@ jobs:
           payload = {
               'username': 'PulseCore',
               'embeds': [{
-                  'title': name,
+                  'title': rel.get('name') or tag,
                   'url': url,
                   'description': body,
                   'color': 0x4C8DFF,
                   'footer': {'text': 'Update through Steam · report anything odd in #bug-reports'},
               }],
           }
-          req = urllib.request.Request(os.environ['WEBHOOK'] + '?wait=true',
-                                       data=json.dumps(payload).encode(),
-                                       headers={'Content-Type': 'application/json'})
+          # A real User-Agent is REQUIRED: Discord rejects urllib's default with 403 before the
+          # request ever reaches the webhook.
+          req = urllib.request.Request(
+              os.environ['WEBHOOK'] + '?wait=true',
+              data=json.dumps(payload).encode(),
+              headers={'Content-Type': 'application/json',
+                       'User-Agent': 'PulseCore-Announce (https://github.com/ligun0510/PulseCore, 1.0)'})
           with urllib.request.urlopen(req) as r:
               print('posted', r.status)
           PY
