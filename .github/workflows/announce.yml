@@ -1,0 +1,59 @@
+name: Announce release on Discord
+
+# Publishing a release IS the announcement. Doing it by hand means the day the release is most
+# hectic is the day the announcement is forgotten -- and a community that hears about versions late
+# stops checking.
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Tag to announce (for re-sending an existing release)
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  announce:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Post the release notes to Discord
+        env:
+          WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+          TAG: ${{ github.event.release.tag_name || inputs.tag }}
+          NAME: ${{ github.event.release.name }}
+          BODY: ${{ github.event.release.body }}
+          URL: ${{ github.event.release.html_url }}
+        run: |
+          python3 - <<'PY'
+          import json, os, urllib.request
+
+          tag = os.environ['TAG']
+          name = os.environ.get('NAME') or tag
+          body = os.environ.get('BODY') or ''
+          url = os.environ.get('URL') or f'https://github.com/{os.environ["GITHUB_REPOSITORY"]}/releases/tag/{tag}'
+
+          # Discord truncates hard at 4096 in an embed description. Cutting at a line boundary and
+          # linking out beats a sentence that stops mid-word.
+          LIMIT = 3800
+          if len(body) > LIMIT:
+              body = body[:LIMIT].rsplit('\n', 1)[0] + f'\n\n…[read the rest on GitHub]({url})'
+
+          payload = {
+              'username': 'PulseCore',
+              'embeds': [{
+                  'title': name,
+                  'url': url,
+                  'description': body,
+                  'color': 0x4C8DFF,
+                  'footer': {'text': 'Update through Steam · report anything odd in #bug-reports'},
+              }],
+          }
+          req = urllib.request.Request(os.environ['WEBHOOK'] + '?wait=true',
+                                       data=json.dumps(payload).encode(),
+                                       headers={'Content-Type': 'application/json'})
+          with urllib.request.urlopen(req) as r:
+              print('posted', r.status)
+          PY
