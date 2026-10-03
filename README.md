@@ -1,7 +1,7 @@
 # PadWave
 
 ![Platform](https://img.shields.io/badge/platform-Windows%2011%20x64-0078D6)
-![Status](https://img.shields.io/badge/status-beta-orange)
+![Version](https://img.shields.io/badge/version-1.0.0-7C4DFF)
 [![Steam](https://img.shields.io/badge/Steam-store%20page%20soon-1b2838?logo=steam&logoColor=white)](https://store.steampowered.com/)
 [![Discord](https://img.shields.io/badge/Discord-join%20the%20community-5865F2?logo=discord&logoColor=white)](https://discord.gg/tYRFz6n8Rw)
 
@@ -18,7 +18,7 @@ fully‑featured controller — no cable required.
 
 All wireless. All at once.
 
-> **Beta.** PadWave is under active development — feedback is very welcome.
+> Feedback is very welcome — PadWave keeps getting better with every update.
 
 ## Screenshots
 

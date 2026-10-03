@@ -1,6 +1,6 @@
 # Changelog
 
-User-facing changes to PadWave. It's beta, so expect frequent updates.
+User-facing changes to PadWave.
 
 ## 0.9.0 — 2026-07-21
 
