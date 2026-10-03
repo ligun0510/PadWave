@@ -1,6 +1,6 @@
 # Changelog
 
-User-facing changes to PulseCore. It's beta, so expect frequent updates.
+User-facing changes to PadWave. It's beta, so expect frequent updates.
 
 ## 0.9.0 — 2026-07-21
 
@@ -13,7 +13,7 @@ First public beta.
 - **Mods:** a new tab with effect packs — ready-made sets of adaptive-trigger and haptic effects for
   a particular game, installed with one click. Packs update themselves when a better version is
   published, and the app says what changed. First up: Half-Life 2 and both episodes.
-- **Auto power-off:** the controller now turns itself off when you fully quit PulseCore
+- **Auto power-off:** the controller now turns itself off when you fully quit PadWave
   (minimizing to the tray keeps it on).
 - The controller **microphone** is available to Windows by default.
 - **Audio player:** play your own audio file straight through the controller's speaker
@@ -29,7 +29,7 @@ First public beta.
 - **Controller audio no longer stops after the controller reconnects** (sleep, power-cycle
   or re-pair) — sound keeps working without removing and re-adding the controller.
 - **A sleeping controller is now shown as asleep**, not as connected. Windows keeps calling it
-  connected long after it has stopped sending anything, which made PulseCore look broken when the
+  connected long after it has stopped sending anything, which made PadWave look broken when the
   controller had simply dozed off. Press the PS button and it comes straight back.
 - **Waking the controller no longer interrupts a running game.** The virtual controller stays in
   place while the real one is away, so games and controller audio survive a sleep, a walk out of

@@ -1,6 +1,6 @@
 # Security Policy
 
-PulseCore installs system components and works closely with controller/HID input, so we take
+PadWave installs system components and works closely with controller/HID input, so we take
 security reports seriously.
 
 ## Reporting a vulnerability
@@ -13,12 +13,12 @@ Report privately through GitHub's **[private vulnerability reporting](../../secu
 Please include:
 - what you found and its impact,
 - steps to reproduce,
-- your setup (Windows version, PulseCore version).
+- your setup (Windows version, PadWave version).
 
-We'll acknowledge your report and keep you updated on the fix. Thanks for helping keep PulseCore users
+We'll acknowledge your report and keep you updated on the fix. Thanks for helping keep PadWave users
 safe.
 
 ## Scope
 
-In scope: the PulseCore application, its installer and its updater.
-Out of scope: third-party components (Windows, drivers) — unless the issue is in how PulseCore uses them.
+In scope: the PadWave application, its installer and its updater.
+Out of scope: third-party components (Windows, drivers) — unless the issue is in how PadWave uses them.

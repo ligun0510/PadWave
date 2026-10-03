@@ -1,4 +1,4 @@
-# PulseCore
+# PadWave
 
 ![Platform](https://img.shields.io/badge/platform-Windows%2011%20x64-0078D6)
 ![Status](https://img.shields.io/badge/status-beta-orange)
@@ -7,7 +7,7 @@
 
 **Use your DualSense wirelessly on PC — the full experience, as if it were plugged in.**
 
-PulseCore brings the complete DualSense feel to Windows over Bluetooth. Your games get a
+PadWave brings the complete DualSense feel to Windows over Bluetooth. Your games get a
 fully‑featured controller — no cable required.
 
 - 🎮 **Full input** in every game
@@ -18,7 +18,7 @@ fully‑featured controller — no cable required.
 
 All wireless. All at once.
 
-> **Beta.** PulseCore is under active development — feedback is very welcome.
+> **Beta.** PadWave is under active development — feedback is very welcome.
 
 ## Screenshots
 
@@ -32,19 +32,19 @@ _Coming soon._
 - A Sony **DualSense** controller
 - Bluetooth
 
-## Get PulseCore
+## Get PadWave
 
-PulseCore is available on **Steam** — install once and it stays updated automatically.
+PadWave is available on **Steam** — install once and it stays updated automatically.
 
 👉 **[Get it on Steam](https://store.steampowered.com/)** &nbsp;*(store page coming soon)*
 
 ## Getting started
 
-1. Install PulseCore from Steam and launch it.
-2. On first launch, allow PulseCore to install the required components (one prompt).
+1. Install PadWave from Steam and launch it.
+2. On first launch, allow PadWave to install the required components (one prompt).
 3. Pair your DualSense over Bluetooth — hold **PS + Create** until the lightbar flashes, then
    select it in Windows Bluetooth settings.
-4. Press **Start** in PulseCore. That's it — play.
+4. Press **Start** in PadWave. That's it — play.
 
 ## Features
 
@@ -60,10 +60,10 @@ PulseCore is available on **Steam** — install once and it stays updated automa
 Yes — games see a standard DualSense.
 
 **My controller isn't detected.**
-Make sure it's paired in Windows Bluetooth settings and PulseCore is running, then press **Start**.
+Make sure it's paired in Windows Bluetooth settings and PadWave is running, then press **Start**.
 
 **No controller sound or microphone?**
-Open the **Audio** page and check the toggles; select PulseCore's audio device in Windows if needed.
+Open the **Audio** page and check the toggles. Games that support the controller speaker send their sounds to it themselves; you do not need to make the controller your Windows sound device.
 
 **Adaptive triggers or rumble don't react in a game.**
 Some titles need their native controller support enabled (and Steam Input set accordingly).
@@ -86,6 +86,6 @@ IDs stripped out.
 
 ---
 
-PulseCore is proprietary software. All rights reserved.
+PadWave is proprietary software. All rights reserved.
 Not affiliated with Sony Interactive Entertainment. "DualSense" and "PlayStation" are trademarks of
 their respective owners.

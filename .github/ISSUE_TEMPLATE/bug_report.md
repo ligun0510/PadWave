@@ -18,7 +18,7 @@ A clear description of the problem.
 **Setup**
 - Windows version:
 - Controller: DualSense / DualSense Edge
-- PulseCore version:
+- PadWave version:
 - Connection: Bluetooth
 
 **Screenshots / diagnostics**

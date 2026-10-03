@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
   - name: Questions & help
-    url: https://github.com/ligun0510/PulseCore/discussions
-    about: How to set up or use PulseCore — ask here.
-  - name: Get PulseCore on Steam
+    url: https://github.com/ligun0510/PadWave/discussions
+    about: How to set up or use PadWave — ask here.
+  - name: Get PadWave on Steam
     url: https://store.steampowered.com/
     about: Install and automatic updates (store page coming soon).

@@ -5,7 +5,7 @@ title: "[Idea] "
 labels: enhancement
 ---
 
-**What would you like PulseCore to do?**
+**What would you like PadWave to do?**
 
 **Why — what's the use case?**
 

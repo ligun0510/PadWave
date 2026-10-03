@@ -34,7 +34,7 @@ jobs:
           # The release is fetched by tag rather than read from the event payload, so a manual re-send
           # produces exactly the same message as the automatic one. Two code paths that can disagree
           # is how the re-send ends up posting an empty announcement.
-          def get(url, token=None, ua='PulseCore-Announce'):
+          def get(url, token=None, ua='PadWave-Announce'):
               req = urllib.request.Request(url, headers={'User-Agent': ua})
               if token:
                   req.add_header('Authorization', 'Bearer ' + token)
@@ -54,7 +54,7 @@ jobs:
               body = body[:LIMIT].rsplit('\n', 1)[0] + f'\n\n…[read the rest on GitHub]({url})'
 
           payload = {
-              'username': 'PulseCore',
+              'username': 'PadWave',
               'embeds': [{
                   'title': rel.get('name') or tag,
                   'url': url,
@@ -69,7 +69,7 @@ jobs:
               os.environ['WEBHOOK'] + '?wait=true',
               data=json.dumps(payload).encode(),
               headers={'Content-Type': 'application/json',
-                       'User-Agent': 'PulseCore-Announce (https://github.com/ligun0510/PulseCore, 1.0)'})
+                       'User-Agent': 'PadWave-Announce (https://github.com/ligun0510/PadWave, 1.0)'})
           with urllib.request.urlopen(req) as r:
               print('posted', r.status)
           PY
